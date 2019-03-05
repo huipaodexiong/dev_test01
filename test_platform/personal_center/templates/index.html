@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="/index/" method="post">
+      <p>账号: <input type="text" name="username" /></p>
+      <p>密码: <input type="password" name="password" /></p>
+        <div style="color: red">{{error}}</div>
+        {% csrf_token %}
+      <input type="submit" value="登录" />
+    </form>
+</body>
+</html>
+
+<!--http://127.0.0.1:8000/index/form_action.asp?fname=xiongrun&lname=123-->
+<!--http://127.0.0.1:8000/index/login_action?username=xiongrun&password=123-->
+<!--http://127.0.0.1:8000/login_action?username=123&password=123-->
